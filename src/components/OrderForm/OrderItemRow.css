@@ -1,0 +1,51 @@
+.order-item-row {
+    display: grid;
+    grid-template-columns: 1fr 110px 80px;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item-row label {
+    display: block;
+    font-size: 12px;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.order-item-row input[type="number"] {
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.order-item-row .remove-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 8px;
+    background: #fff;
+    border: 1px solid #eee;
+    color: #d32f2f;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.order-item-row .remove-btn:hover {
+    background: #fff6f6;
+}
+
+@media (max-width: 620px) {
+    .order-item-row {
+        grid-template-columns: 1fr 90px;
+        grid-auto-rows: auto;
+    }
+    .order-item-row .remove-btn {
+        grid-column: 1 / -1;
+        justify-self: end;
+    }
+}
